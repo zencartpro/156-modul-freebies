@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Freebies 2.1.0 - Geschenke ab bestimmten Bestellwert für Zen Cart 1.5.6 deutsch</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="de">
+<meta name="description" content="Freebies anbieten für Zen Cart 1.5.6 deutsch">
+<link rel="stylesheet" type="text/css" href="includes/css/stylesheet.css">  
+<script type="text/javascript" src="includes/jscript/jscript_tabs.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+<h1>Freebies 2.1.0 - Geschenke ab bestimmten Bestellwert für Zen Cart 1.5.6 deutsch</h1>
+</div>
+
+<div id="slidetabsmenu" style="display: none;">
+<ul>
+  <li> <a onClick="expandcontent('sc1', this)" href="javascript:void(0)"><span>Sinn und Zweck</span></a></li>
+  <li> <a onClick="expandcontent('sc2', this)" href="javascript:void(0)"><span>Installation</span></a></li>
+   <li> <a onClick="expandcontent('sc3', this)" href="javascript:void(0)"><span>Konfiguration</span></a></li>
+   <li> <a onClick="expandcontent('sc4', this)" href="javascript:void(0)"><span>Deinstallation</span></a></li>
+  <li> <a onClick="expandcontent('sc5', this)" href="javascript:void(0)"><span>Download & Support</span></a></li>
+  <li> <a onClick="expandcontent('sc6', this)" href="javascript:void(0)"><span>Unterstützen</span></a></li>
+ </ul>
+</div>
+<br style="clear: both;">
+
+<!--Begin tabcontainer-->
+<div id="tabcontentcontainer">
+
+<!--Begin sc1-->
+<div class="tabcontent" id="sc1" style="display: block;">
+<div class="textcontent">
+<div class="regularlist">
+
+<h2>Sinn und Zweck dieses Moduls</h2>
+
+  <p>Dieses Modul ermöglicht das Anbieten von kostenlosen Geschenken, aus denen Kunden im Zuge der Bestellung wählen können, falls sie bestimmte Bestellwerte erreichen. Die Freebies erscheinen im Warenkorb zur Auswahl, falls der Bestellwert erreicht wird.<br><br/>Für jeden Freebie Artikel können unterschiedliche Bestellwerte definiert werden.<br/>
+  Wir der Bestellwert knapp nicht erreicht, erscheinen die passenden Freebies mit einem entsprechenden Hinweis wieviel Bestellwert noch nötig ist.<br>
+  <br>
+  Es kann immer nur ein Freebie einer Bestellung hinzugefügt werden. Sollte der Bestellwert durch Änderungen im Warenkorb zu niedrig werden, wird der Freebie automatisch mit einem entsprechenden Hinweis aus dem Warenkorb entfernt.<br>
+  <br>
+  Wenn Kunden ein Freebie im Warenkorb haben und sich dann ausloggen, werden beim erneuten Login keine Freebies im Warenkorb wiederhergestellt, um zu verhindern, dass sich dort mehrere Freebies befinden können.<br/><br/>Ein ausgewählter Freebie Artikel wird dann mit der Bestellung als ganz normaler Artikel durchgeschliffen.<br/><br/>
+  Im Shop sind die Freebie Artikel sonst nirgendwo ersichtlich, da sie als deaktivierte Artikel in einer deaktivierten Kategorie angelegt werden. In der Freebie Übersicht im Warenkorb sind sie aber mit einer abgespeckten Artikeldetailseite anclickbar, damit sich Kunden über diese Artikel genauer informieren können. Die Freebies müssen nicht unbedingt kostenlos sein, man könnte das auch nutzen um Artikel zu einem reduzierten Preis dazuzugeben.</p>
+  <p>Demo:<br>
+    <a href="https://www.zen-cart-pro.net/moduldemos/155de-freebies">https://www.zen-cart-pro.net/moduldemos/155de-freebies</a></p>
+<h3>Copyright,  Lizenz, Changelog</h3>
+<p>Copyright<br>
+(c) 2017-2019 webchills (<a href="http://www.webchills.at" target="_blank">www.webchills.at</a>)</p>
+<p>Dieses Modul basiert auf dem alten <a href="https://www.zen-cart.com/downloads.php?do=file&id=802">Dangling Carrot Plugin</a></p>
+<p>Credit to Chris Tanner (OS Commerce) for the original contribution.<br>
+  ======================================================<br>
+  V1.0</p>
+<p>Initial Alpha release following port from OS Commerce.<br>
+  ======================================================<br>
+  V1.1</p>
+<p>Major bug fixes implemented. Removal of redundant code.<br>
+  =======================================================<br>
+  V1.2</p>
+<p>Bug fix to solve issue where updating qty in cart caused gift qty to increase.<br>
+  Redundant code removed.<br>
+  ==============================================================================<br>
+  v1.3</p>
+<p>Re-write sql queries to allow database prefixes.<br>
+  ==============================================================================<br>
+  v1.32</p>
+<p>Fix errors in gift_add.php file.<br>
+  Rework file structure to reduce number of core files overwritten.</p>
+<p>==============================================================================</p>
+<p>v1.33</p>
+<p>updated by lankeeyankee</p>
+<p>Fixed error in gift_add.php so existing gifts are displayed<br>
+  Fixed missing and incorrect files to work with 1.3.8a<br>
+  Fixed broken automatic remove from cart functionality when a gift is in the cart and the cart value changes to below threshold level<br>
+  <br>
+  ==============================================================================</p>
+<p>v2.1.0 - Juli 2019<br>
+  <br>
+  Anpassungen für 1.5.6 und PHP 7.3
+<br>
+  <br>v2.0.1 - Mai 2019<br>
+  <br>
+  Anpassungen für 1.5.5f und PHP 7.1
+<br>
+  <br>
+  v2.0.0 - November 2017</p>
+<p>updated by webchills</p>
+<ul>
+  <li>Anpassung für Zen Cart 1.5.5 deutsch</li>
+  <li>    Wenn der Bestellwert durch Änderungen im Warenkorb nicht mehr erreicht wird, wird das Geschenk mit einer Message Stack Hinweismeldung aus dem Warenkorb entfernt</li>
+  <li>Freebie Artikel können nun als vollständig deaktiviert angelegt werden        </li>
+  <li>Beim Wiederherstellen gespeicherter Warenkörbe werden nun keine Freebie Artikel mehr wiederhergestellt          </li>
+  <li>Fehler im Installer behoben und auf Auto-Installer umgestellt            </li>
+  <li>    Anleitung aktualisiert
+  </li>
+</ul>
+<p> Portions Copyright (c) 2003 osCommerce<br>
+  Portions Copyright     (c) 2003-2019 Zen Cart</p>
+<p>This contribution is subject to version 2.0 of the GPL license available through the world-wide-web at the following url:<br>
+  <a href="http://www.zen-cart-pro.at/license/2_0.txt">http://www.zen-cart-pro.at/license/2_0.txt</a></p>
+</div>
+</div>
+</div>
+<!--End sc1-->
+
+<!--Begin sc2-->
+<div class="tabcontent" id="sc2" style="display: block;">
+<div class="textcontent">
+<div class="regularlist">
+
+<h2>Installation</h2>
+<h3>Voraussetzungen</h3>
+  <br>
+  <p>Dieses Modul ist<strong> nur für Zen Cart 1.5.6 deutsch geeignet</strong> und ändert zahlreiche für den Bestellablauf sehr wichtige Corefiles.<br>
+    <strong>Es ist kein Modul, das Sie in 2 Minuten einfach hochladen können.</strong><br>
+  <br>
+    Für den Einbau dieses Moduls sollten Sie über folgende Werkzeuge verfügen:<br>
+  <br>
+    1) Ein guter Texteditor. <br>
+    Damit ist nicht das in Windows enthaltene Notepad oder Microsoft Word gemeint.<br>
+    Sie benötigen einen Texteditor, der utf-8 versteht und auch im Format utf-8 ohne BOM abspeichern kann.<br>
+    Meine Empfehlung: <a href="http://www.ultraedit.com/loc/de/index_de.html" target="_blank">UltraEdit</a> (kostenlose 30 Tage Testversion verfügbar)<br>
+    Ebenfalls gut geeignet ist der kostenlose Texteditor <a href="http://notepad-plus.sourceforge.net/de/site.htm" target="_blank">Notepad++ </a><br>
+  </p>
+  <p>2) Ein Tool zum Vergleichen von Dateien<br>
+    Bei der Installation dieses Moduls ist es erforderlich, dass Sie den   Inhalt einiger Ihrer bestehenden Zen Cart Dateien mit dem Inhalt der   neuen Moduldateien vergleichen und die Änderungen zusammenführen   ("mergen").<br>
+    Meine Empfehlung: <a href="http://www.scootersoftware.com/" target="_blank">BeyondCompare</a> (kostenlose 30 Tage Testversion verfügbar)<br>
+    Ebenfalls gut geeignet ist das kostenlose Programm <a href="http://winmerge.org/" target="_blank">WinMerge </a></p>
+  <p><br>
+  <strong>Empfehlung:</strong><br>
+  <br>
+  Dieses Modul erst in einem Testsystem einbauen und dort   konfigurieren/testen und endgültig an die eigenen Wünsche anpassen.        Erst dann in einem Liveshop einsetzen! Sichern Sie unbedingt alle   Dateien Ihres Shops per FTP und sichern Sie die Datenbank mit phpMyAdmin   oder anderen geeigneten Tools!</p>
+<div id="warning"><b>WICHTIG</b><br>
+Vor dem Einbau dieser Änderungen:<br>
+BACKUP von Shop und Datenbank machen! <br>
+Keine Haftung, Verwendung auf eigene Gefahr!<br>
+BACKUP gemacht? Ok, dann weiterlesen...
+</div>
+<p>Die Installation erfolgt in folgenden Schritten. Halten Sie diesen Ablauf ein!</p>
+<p>1)<br>
+  Im Ordner GEAENDERTE DATEIEN alle Ordner namens DEINTEMPLATE auf das   im Shop verwendete Template umbennen.   <br>
+  Die Ordner DEINTEMPLATE_RESPONSIVE enthalten angepasste Dateien speziell für das 1.5.6 Standardtemplate responsive_classic. Falls Sie also in Ihrem Shop das Template responsive_classic verwenden, dann verwenden Sie die Dateien aus DEINTEMPLATE_RESPONSIVE und nicht die aus DEINTEMPLATE.<br>
+Den Ordner DEINADMIN auf den Namen Ihres admin Verzeichnisses   umbenennen.<br>
+  Wenn Sie Zen Cart 1.5.6 gerade frisch installiert haben und noch   keinerlei Änderungen an den Dateien vorgenommen haben, können Sie nun  alle Dateien/Ordner aus dem Ordner GEAENDERTE DATEIEN in der   vorgegebenen Struktur in die Zen Cart Installation hochladen. Dabei   werden dann etliche Dateien überschrieben.<br>
+  Wenn Sie Zen Cart 1.5.6 schon länger im Einsatz haben und schon einmal   Änderungen an Dateien vorgenommen oder andere Module eingebaut haben,   dann laden Sie die Dateien keinesfalls einfach hoch. <br>
+  Vergleichen Sie alle Dateien im Ordner GEAENDERTE DATEIEN mit den   entsprechenden Dateien in Ihrem Shop und nehmen Sie die Änderungen   manuell per WinMerge oder BeyondCompare vor.<br>
+  Dann spielen Sie die geänderten Dateien in der gezeigten Struktur ein.<br>
+  <br>
+  2) <br>
+Im Ordner NEUE DATEIEN alle Ordner namens DEINTEMPLATE auf das im Shop   verwendete Template umbennen (z.B. viennaorange, responsive_classic, ...). Den   Ordner DEINADMIN auf den Namen Ihres admin Verzeichnisses   umbenennen.<br>
+<br>
+3)<br>
+In die Zen Cart Administration einloggen<br>
+<br>
+4)<br>
+Überprüfen Sie nun erst nochmal ob Sie wirklich in Schritt 2 die Ordner in NEUE DATEIEN entsprechend umbenannt haben.<br>
+Ja?<br>
+Dann nun alle Dateien/Ordner aus dem Ordner NEUE DATEIEN in der vorgegebenen Struktur in die Zen Cart Installation hochladen. <br>
+  Dabei werden keine bestehende Datei überschrieben.<br>
+  <br>
+  5)<br>
+  In der Zen Cart Administration auf irgendeinen Menüpunkt clicken. Sie sollten oben grüne Erfolgsmeldungen sehen und unter Tools ist nun der neue Menüpunkt &quot;Freebies ab bestimmtem Bestellwert&quot; vorhanden.
+  Beim Bearbeiten eines Artikels sollte nun ein neues Feld namens &quot;Artikel ist Freebie&quot; zum Ankreuzen vorhanden sein.
+</p>
+
+  </div>
+</div>
+</div>
+
+<!--End sc2-->
+
+<!--Begin sc3-->
+<div class="tabcontent" id="sc3" style="display: block;">
+<div class="textcontent">
+<div class="regularlist">
+
+<h2>KONFIGURATION</h2>
+<p><b>Anlegen der Freebie Artikel</b></p>
+<p>Legen Sie zuerst eine eigene Kategorie an, die später die Freebie Artikel enthalten soll. Deaktivieren Sie danach diese Kategorie, sie wird im Shop nirgends aufscheinen.<br>
+  <br>
+  In dieser Kategorie legen Sie nun Ihre Freebie Artikel als ganz normale Artikel an mit folgenden speziellen Einstellungen:<br>
+  Kreuzen Sie bei diesen Artikeln &quot;Artikel ist Freebie&quot; an.<br>
+  Steuersatz: kein<br>
+  Preis: 0<br>
+  Artikelstatus: deaktiviert<br>
+  Mengeneingabefeld anzeigen: nein
+  <br>
+  Irgendeinen sehr hohen Lagerbestand verwenden, z.B. 99999
+  <br>
+  <br>
+Nach diesem Muster alle gewünschten Freebies anlegen und darauf achten, dass all diese Artikel deaktiviert sind<br>
+  <strong><br>
+    Zuweisung der Freebie Artikel zu Bestellwerten<br>
+  </strong><br>
+  Unter Tools &gt; Freebies ab bestimmtem Bestellwert weisen Sie nun bestimmten Bestellwerten die gewünschten Freebies zu<br>
+  <br>
+  Sobald hier Zuordnungen vorgenommen wurden, erscheinen die Freebies im Warenkorb zur Auswahl, falls der Bestellwert erreicht wird.<br>
+  Wir der Bestellwert knapp nicht erreicht, erscheinen die passenden Freebies mit einem entsprechenden Hinweis wieviel Bestellwert noch nötig ist.<br>
+  <br>
+  Es kann immer nur ein Freebie einer Bestellung hinzugefügt werden. Sollte der Bestellwert durch Änderungen im Warenkorb zu niedrig werden, wird der Freebie automatisch mit einem entsprechenden Hinweis aus dem Warenkorb entfernt.<br>
+  <br>
+  Wenn Kunden ein Freebie im Warenkorb haben und sich dann ausloggen, werden beim erneuten Login keine Freebies im Warenkorb wiederhergestellt, um zu verhindern, dass sich dort mehrere Freebies befinden können.
+  <br>
+  <br>
+  <strong>Größe der Artikelbilder auf der Warenkorbseite</strong><br>
+  <br>
+  Unter Konfiguration &gt; Bilder kann die Höhe/Breite der Freebie Artikelbilder mit den zwei neuen Menüpunkten eingestellt werden
+</p>
+</div>
+</div>
+</div>
+<!--End sc3-->
+
+<!--Begin sc4-->
+<div class="tabcontent" id="sc4" style="display: block;">
+<div class="textcontent">
+<div class="regularlist">
+
+<h2>DEINSTALLATION</h2>
+<p>1.<br>
+  Alle von diesem Modul neu angelegten Dateien vom Server löschen.<br>
+  Alle von diesem Modul geänderten Dateien wieder mit den Originalversionen bzw. den Dateien Ihres Backups ersetzen.<br>
+  <br>
+  2.<br>
+Die Datei uninstall.sql im Ordner SQL mit einem Texteditor öffen und den Inhalt kopieren</p>
+<p>3.<br>
+  Zen Cart Administration öffnen und unter Tools &gt; SQL Patches installieren den Inhalt ins Feld hineinkopieren und absenden.</p>
+<p>&nbsp; </p>
+</div>
+</div>
+</div>
+<!--End sc4-->
+
+<!--Begin sc5-->
+<div class="tabcontent" id="sc5" style="display: block;">
+<div class="textcontent">
+<div class="regularlist">
+<h2>Download &amp; Support</h2>
+<p>Download des Moduls:</p>
+<p><a href="https://www.zen-cart-pro.at/forum/vbdownloads.php?categoryid=16" target="_blank">www.zen-cart-pro.at/forum/vbdownloads.php</a></p>
+
+<p>Supportforum zum Modul:</p>
+<p><a href="https://www.zen-cart-pro.at/forum/forums/128-Freebies-Geschenke-ab-bestimmtem-Bestellwert" target="_blank">www.zen-cart-pro.at/forum/forums/128-Freebies-Geschenke-ab-bestimmtem-Bestellwert</a></p>
+</div>
+</div>
+</div>
+<!--End sc5-->
+
+<!--Begin sc6-->
+<div class="tabcontent" id="sc6" style="display: block;">
+<div class="textcontent">
+<div class="regularlist">
+
+<h2>Unterstützen</h2>
+<p>Sie finden dieses Modul nützlich?</p>
+<p>Unterstützen Sie die Weiterentwicklung der deutschen Zen Cart Version.<br/>Wir freuen uns über Spenden zur Finanzierung des Servers und der vBulletin-Lizenz: </p>
+<p align="center"><a href="https://donorbox.org/spende-fur-die-weiterentwicklung-der-deutschen-zen-cart-version" target="_blank"><img src="https://www.zen-cart-pro.at/zencartpro-donation-white.png" alt="Spende für die Weiterentwicklung der deutschen Zen Cart Version" title="Spende für die Weiterentwicklung der deutschen Zen Cart Version"></a></p>
+<br/><br/>
+<p>Du bist Entwickler und willst helfen, die deutsche Zen Cart Version noch besser zu machen?<br>
+  Beteilige Dich auf Github:<br>
+  <a href="https://github.com/zencartpro" target="_blank"><strong>https://github.com/zencartpro</strong></a></p>
+<br/><br/>
+</div>
+</div>
+</div>
+<!--End sc6-->
+</div>
+<div id="footer">
+Ein Modul von <a href="https://www.zen-cart-pro.at" target="_blank">www.zen-cart-pro.at</a> - Die deutsche Zen Cart Version
+</div>
+</div>
+<!--end tabcontainer-->
+<script type="text/javascript">document.getElementById('sc1').style.display = 'none';</script>
+<script type="text/javascript">document.getElementById('sc2').style.display = 'none';</script>
+<script type="text/javascript">document.getElementById('sc3').style.display = 'none';</script>
+<script type="text/javascript">document.getElementById('sc4').style.display = 'none';</script>
+<script type="text/javascript">document.getElementById('sc5').style.display = 'none';</script>
+<script type="text/javascript">document.getElementById('sc6').style.display = 'none';</script>
+<script type="text/javascript">ShowTabs()</script>
+<script type="text/javascript">
+// We only show the tab links if JavaScript is available/active.
+<!--
+if (document.getElementById("slidetabsmenu") != null) {
+  document.getElementById('slidetabsmenu').style.display = "block";
+}
+//-->
+</script>
+
+</body></html>
