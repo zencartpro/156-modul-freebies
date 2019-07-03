@@ -4,7 +4,7 @@
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: category_product_listing.php for Free Gifts 2019-07-01 15:24:16Z webchills $
+ * @version $Id: category_product_listing.php for Free Gifts 2019-07-03 07:24:16Z webchills $
  */
 require('includes/application_top.php');
 $languages = zen_get_languages();
@@ -573,19 +573,23 @@ if (is_dir(DIR_FS_CATALOG_IMAGES)) {
                   <th class="text-right"><?php echo TABLE_HEADING_ID; ?></th>
                   <th><?php echo TABLE_HEADING_CATEGORIES_PRODUCTS; ?></th>
                   <th class="hidden-md hidden-sm hidden-xs"><?php echo TABLE_HEADING_MODEL; ?></th>
-                  <th class="text-right hidden-md hidden-sm hidden-xs"><?php echo TABLE_HEADING_PRICE; ?></th>
-		          <th class="text-right hidden-md hidden-sm hidden-xs"><?php echo TEXT_CARROT; ?></td>
+                  
+                  <th class="text-right hidden-md hidden-sm hidden-xs"><?php echo TABLE_HEADING_PRICE; ?></th>		              
                   <th class="text-right hidden-md hidden-sm hidden-xs">&nbsp;</th>
                   <th class="text-right hidden-md hidden-sm hidden-xs"><?php echo TABLE_HEADING_QUANTITY; ?></th>
+                  
+                 
                   <th class="text-right hidden-md hidden-sm hidden-xs"><?php echo TABLE_HEADING_STATUS; ?></th>
                   <?php
                   if ($action == '') {
                     ?>
+					          
                     <th class="text-right hidden-md hidden-sm hidden-xs"><?php echo TABLE_HEADING_CATEGORIES_SORT_ORDER; ?></th>
                     <th class="text-right"><?php echo TABLE_HEADING_ACTION; ?></th>
                     <?php
                   }
                   ?>
+                  
                 </tr>
               </thead>
               <?php
@@ -852,17 +856,19 @@ if (is_dir(DIR_FS_CATALOG_IMAGES)) {
                 <tr>
                   <td class="text-right"><?php echo $product['products_id']; ?></td>
                   <td><a href="<?php echo zen_catalog_href_link($type_handler . '_info', 'cPath=' . $cPath . '&products_id=' . $product['products_id'] . '&language=' . $_SESSION['languages_code'] . '&product_type=' . $product['products_type']); ?>" target="_blank"><?php echo zen_image(DIR_WS_ICONS . 'preview.gif', ICON_PREVIEW); ?></a>&nbsp;<?php echo $product['products_name']; ?></td>
-                  <td class="hidden-md hidden-sm hidden-xs"><?php echo $product['products_model']; ?></td>
-                  <td colspan="2" class="text-right hidden-md hidden-sm hidden-xs"><?php echo zen_get_products_display_price($product['products_id']); ?></td>
-	<td class="text-right hidden-md hidden-sm hidden-xs"><?php
+                  <td class="hidden-md hidden-sm hidden-xs"><?php echo $product['products_model']; ?><?php
       if ($products->fields['products_carrot'] == '1') {
-        echo '<b>X</b>';
+        echo ' <b>(Freebie)</b>';
       } else {
         echo '';
       }
      
-?>	</td>
+?></td>
+                 
+                 
+                  <td colspan="2" class="text-right hidden-md hidden-sm hidden-xs"><?php echo zen_get_products_display_price($product['products_id']); ?></td>
                   <td class="text-right hidden-md hidden-sm hidden-xs"><?php echo $product['products_quantity']; ?></td>
+				  
                   <td class="text-right hidden-md hidden-sm hidden-xs">
 <?php
                       $additional_icons = '';
@@ -891,6 +897,7 @@ if (is_dir(DIR_FS_CATALOG_IMAGES)) {
                   <?php
                   if ($action == '') {
                     ?>
+					
                     <td class="text-right hidden-md hidden-sm hidden-xs"><?php echo $product['products_sort_order']; ?></td>
                     <td class="text-right">
                       <a href="<?php echo zen_href_link(FILENAME_PRODUCT, 'cPath=' . $cPath . '&product_type=' . $product['products_type'] . '&pID=' . $product['products_id'] . '&action=new_product' . (isset($_GET['search']) ? '&search=' . $_GET['search'] : '')); ?>" style="text-decoration: none">
