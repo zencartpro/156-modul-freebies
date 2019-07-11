@@ -6,7 +6,7 @@
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: shopping_cart.php for Free Gifts 2019-07-02 12:08:29Z webchills $
+ * @version $Id: shopping_cart.php for Free Gifts 2019-07-11 16:08:29Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
   die('Illegal Access');
@@ -69,7 +69,7 @@ class shoppingCart extends base {
    */
   var $display_debug_messages = FALSE;
   var $flag_duplicate_msgs_set = FALSE;
-  var $flag_duplicate_quantity_msgs_set = FALSE;
+  var $flag_duplicate_quantity_msgs_set = array();
   /**
    * constructor method
    *
@@ -2203,13 +2203,13 @@ $carrot_query->MoveNext();
       for ($i=0, $n=sizeof($notify); $i<$n; $i++) {
         $check_query = "select count(*) as count
                           from " . TABLE_PRODUCTS_NOTIFICATIONS . "
-                          where products_id = '" . $notify[$i] . "'
+                          where products_id = '" . (int)$notify[$i] . "'
                           and customers_id = '" . $_SESSION['customer_id'] . "'";
         $check = $db->Execute($check_query);
         if ($check->fields['count'] < 1) {
           $sql = "insert into " . TABLE_PRODUCTS_NOTIFICATIONS . "
                     (products_id, customers_id, date_added)
-                     values ('" . $notify[$i] . "', '" . $_SESSION['customer_id'] . "', now())";
+                     values ('" . (int)$notify[$i] . "', '" . $_SESSION['customer_id'] . "', now())";
           $db->Execute($sql);
         }
       }
@@ -2231,13 +2231,13 @@ $carrot_query->MoveNext();
     if ($_SESSION['customer_id'] && isset($_GET['products_id'])) {
       $check_query = "select count(*) as count
                         from " . TABLE_PRODUCTS_NOTIFICATIONS . "
-                        where products_id = '" . $_GET['products_id'] . "'
+                        where products_id = '" . (int)$_GET['products_id'] . "'
                         and customers_id = '" . $_SESSION['customer_id'] . "'";
 
       $check = $db->Execute($check_query);
       if ($check->fields['count'] > 0) {
         $sql = "delete from " . TABLE_PRODUCTS_NOTIFICATIONS . "
-                  where products_id = '" . $_GET['products_id'] . "'
+                  where products_id = '" . (int)$_GET['products_id'] . "'
                   and customers_id = '" . $_SESSION['customer_id'] . "'";
         $db->Execute($sql);
       }
