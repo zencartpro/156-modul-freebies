@@ -3,10 +3,10 @@
  * Side Box Template
  *
  * @package templateSystem
- * @copyright Copyright 2003-2016 Zen Cart Development Team
+ * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
- * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: tpl_shopping_cart.php 729 2011-08-09 15:49:16Z hugo13 $
+ * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
+ * @version $Id: tpl_shopping_cart.php for Freebies 2019-07-21 14:49:16Z webchills $
  */
   $content ="";
 
@@ -22,16 +22,24 @@
       } else {
         $content .= '<span class="cartOldItem">';
       }
-
+	if ($products[$i]['carrot'] == 1)
+	
+	{ $content .= $products[$i]['quantity'] . BOX_SHOPPING_CART_DIVIDER . '</span>';
+	} else {
       $content .= $products[$i]['quantity'] . BOX_SHOPPING_CART_DIVIDER . '</span><a href="' . zen_href_link(zen_get_info_page($products[$i]['id']), 'products_id=' . $products[$i]['id']) . '">';
-
+	}
       if (isset($_SESSION['new_products_id_in_cart']) && ($_SESSION['new_products_id_in_cart'] == $products[$i]['id'])) {
         $content .= '<span class="cartNewItem">';
       } else {
         $content .= '<span class="cartOldItem">';
       }
-
-      $content .= $products[$i]['name'] . '</span></a></li>' . "\n";
+	
+  if ($products[$i]['carrot'] == 1)
+      {    
+        $content .= $products[$i]['name'] . '</span></li>' . "\n";
+      } else {
+        $content .= $products[$i]['name'] . '</span></a></li>' . "\n";
+      }
 
       if (isset($_SESSION['new_products_id_in_cart']) && ($_SESSION['new_products_id_in_cart'] == $products[$i]['id'])) {
         $_SESSION['new_products_id_in_cart'] = '';

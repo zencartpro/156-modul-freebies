@@ -5,8 +5,8 @@
  * @package admin
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
- * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: update_product.php for Free Gifts 2019-07-01 15:03:16Z webchills $
+ * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
+ * @version $Id: update_product.php for Free Gifts 2019-07-21 14:03:16Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
   die('Illegal Access');
@@ -29,7 +29,7 @@ if (isset($_POST['edit']) && $_POST['edit'] == 'edit') {
     'products_date_available' => $products_date_available,
     'products_weight' => convertToFloat($_POST['products_weight']),
     'products_status' => (int)$_POST['products_status'],
-	'products_carrot' => ($_POST['products_carrot'] == 'on') ? 1 : 0,
+    'products_carrot' => ($_POST['products_carrot'] == 'on') ? 1 : 0,
     'products_virtual' => (int)$_POST['products_virtual'],
     'products_tax_class_id' => (int)$_POST['products_tax_class_id'],
     'manufacturers_id' => (int)$_POST['manufacturers_id'],

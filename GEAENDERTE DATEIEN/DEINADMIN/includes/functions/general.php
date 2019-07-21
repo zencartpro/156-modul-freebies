@@ -4,8 +4,8 @@
  * @package admin
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
- * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: general.php for Free Gifts 2019-07-01 14:55:33Z webchills $
+ * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
+ * @version $Id: general.php for Free Gifts 2019-07-21 14:25:33Z webchills $
  */
 
 ////
@@ -1634,7 +1634,7 @@ while (!$chk_sale_categories_all->EOF) {
     }
   }
 
-  function zen_banner_image_extension() {
+  function zen_supported_image_extension() {
     if (function_exists('imagetypes')) {
       if (imagetypes() & IMG_PNG) {
         return 'png';
@@ -1679,6 +1679,7 @@ while (!$chk_sale_categories_all->EOF) {
   function zen_calculate_tax($price, $tax) {
     return (float)$price * (int)$tax / 100;
   }  
+  
 
 /**
  * Returns the tax rate for a zone / class

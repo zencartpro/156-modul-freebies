@@ -4,8 +4,8 @@
  * @package admin
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
- * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: copy_product_confirm.php for Free Gifts 2019-07-01 15:11:16Z webchills $
+ * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
+ * @version $Id: copy_product_confirm.php for Free Gifts 2019-07-21 14:11:16Z webchills $
  */
 if (!defined('IS_ADMIN_FLAG')) {
   die('Illegal Access');
@@ -82,7 +82,7 @@ if (isset($_POST['products_id']) && isset($_POST['categories_id'])) {
                           now(),
                           " . (zen_not_null(zen_db_input($product->fields['products_date_available'])) ? "'" . zen_db_input($product->fields['products_date_available']) . "'" : 'null') . ",
                           '" . $products_weight . "', '0',
-				          '" . (int)$product->fields['products_carrot'] . "',
+			  '" . (int)$product->fields['products_carrot'] . "',
                           '" . (int)$product->fields['products_tax_class_id'] . "',
                           '" . (int)$product->fields['manufacturers_id'] . "',
                           '" . zen_db_input(($product->fields['products_quantity_order_min'] == 0 ? 1 : $product->fields['products_quantity_order_min'])) . "',

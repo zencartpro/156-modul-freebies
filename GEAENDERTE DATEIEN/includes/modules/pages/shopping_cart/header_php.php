@@ -5,8 +5,8 @@
  * @package page
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
- * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: header_php.php for Free Gifts 2019-07-01 15:05:16Z webchills $
+ * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
+ * @version $Id: header_php.php for Free Gifts 2019-07-21 14:05:16Z webchills $
  */
 
 // This should be first line of the script:
@@ -173,7 +173,7 @@ for ($i=0, $n=sizeof($products); $i<$n; $i++) {
                             'buttonDelete'=>$buttonDelete,
                             'checkBoxDelete'=>$checkBoxDelete,
                             'id'=>$products[$i]['id'],
-			                'carrot'=>$products[$i]['carrot'],
+			    'carrot'=>$products[$i]['carrot'],
                             'attributes'=>$attrArray);
 } // end FOR loop
 
