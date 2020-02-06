@@ -1,6 +1,10 @@
 # 156-modul-freebies
 Freebies ab bestimmtem Bestellwert für Zen Cart 1.5.6 deutsch
 
+Hinweis: 
+Freigegebene getestete Versionen für den Einsatz in Livesystemen ausschließlich unter Releases herunterladen:
+https://github.com/zencartpro/156-modul-freebies/releases
+
 Dieses Modul ermöglicht das Anbieten von kostenlosen Geschenken, aus denen Kunden im Zuge der Bestellung wählen können, falls sie bestimmte Bestellwerte erreichen. Die Freebies erscheinen im Warenkorb zur Auswahl, falls der Bestellwert erreicht wird.
 
 Für jeden Freebie Artikel können unterschiedliche Bestellwerte definiert werden.
