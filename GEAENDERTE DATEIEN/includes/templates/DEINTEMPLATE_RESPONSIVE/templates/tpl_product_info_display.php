@@ -6,10 +6,10 @@
  * Displays details of a typical product
  *
  * @package templateSystem
- * @copyright Copyright 2003-2019 Zen Cart Development Team
+ * @copyright Copyright 2003-2020 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_product_info_display.php for Free Gifts 2019-07-21 14:05:40Z $
+ * @version $Id: tpl_product_info_display.php for Free Gifts 2020-07-24 14:05:40Z $
  */
 
 //require(DIR_WS_MODULES . '/debug_blocks/product_info_prices.php');
@@ -257,7 +257,9 @@ if ($product_info->fields['products_carrot'] == 0) {
   }
 ?>
 <!--eof Product URL -->
-
+<!--bof cross sell module-->
+<?php require($template->get_template_dir('tpl_modules_xsell_products.php', DIR_WS_TEMPLATE, $current_page_base,'templates'). '/' . 'tpl_modules_xsell_products.php'); ?> 
+<!--eof cross sell module-->
 <!--bof also purchased products module-->
 <?php require($template->get_template_dir('tpl_modules_also_purchased_products.php', DIR_WS_TEMPLATE, $current_page_base,'templates'). '/' . 'tpl_modules_also_purchased_products.php');?>
 <!--eof also purchased products module-->
